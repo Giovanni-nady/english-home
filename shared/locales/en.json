@@ -1,0 +1,92 @@
+{
+  "translation": {
+    "welcome": "Welcome to React and react-i18next",
+    "appName":"ENGLISHOME",
+    "title": "Welcome to English Home",
+    "subTitle": "You will speak English from zero to professional",
+    "onboarding": {
+      "title1": "Your Gateway to Relaxation",
+      "description1": "Indulge, Unwind, and Rejuvenate with SpaVation - Where Wellness Meets Luxury",
+      "title2": "Spavation Serenity",
+      "description2": "Immerse Yourself in Luxury, Awaken Your Senses",
+      "title3": "Elevating Wellness",
+      "description3": "Where Every Moment is a Journey to Bliss",
+      "next": "Next",
+      "skip": "Skip",
+      "login": "Login",
+      "signUp": "Sign up"
+    },
+    "login": {
+      "title": "Hello, Welcome Back",
+      "subTitle": "Happy to see you again , please login here.",
+      "email": "Email",
+      "emailPlaceholder": "Enter you email",
+      "password": "Password",
+      "forgotPassword": "Forgot password?",
+      "button": "Login",
+      "noAccount": "Don’t have an account?",
+      "registerNow": "Register now"
+    },
+    "register": {
+      "header": "Register",
+      "title": "Hello, Welcome",
+      "createAccount": "First, let’s create your account",
+      "firstName": "First Name",
+      "firstNamePlaceholder": "Please enter your first name",
+      "lastName": "Last Name",
+      "lastNamePlaceholder": "Please enter your last name",
+      "address": "Address",
+      "addressPlaceholder": "Enter your address",
+      "phone": "Phone",
+      "phonePlaceholder": "Please enter your phone number",
+      "email": "Email",
+      "emailPlaceholder": "Please enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Please enter your password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Please re-enter your password",
+      "button": "Register",
+      "alreadyHaveAccount": "Already have an account?",
+      "login": "Login",
+      "governorate": "Governorate"
+    },
+    "forgetPassword": {
+      "otp": "OTP",
+      "title": "Enter OTP Code",
+      "subTitle": "Enter the 6-digit code sent to",
+      "noCode": "Didn’t get a code?",
+      "resend": "Request new SMS",
+      "confirm": "Confirm"
+    },
+    "home": {
+      "greetingMorning": "Good Morning!",
+      "greetingAfternoon": "Good Afternoon!",
+      "search": "Search",
+      "viewAll": "View All",
+      "categories": "Categories",
+      "discover": {
+        "recommendations": "Recommendations",
+        "nearbySalons": "Nearby Salons",
+        "hotOffers": "Hot Offers",
+        "topRated": "Top Rated"
+      }
+    },
+    "reservation": {
+      "title": "Reservations"
+    },
+    "setting": {
+      "title": "Settings",
+      "account-information": "Account Information",
+      "notifications": "Notifications",
+      "language": "Language",
+      "blocked": "Blocked",
+      "help": "Help",
+      "payment-settings": "Payment Settings",
+      "logout": "Logout",
+      "change-password": "Change password",
+      "personal-details": "Personal Details",
+      "save-changes": "Save Changes",
+      "save": "Save"
+    }
+  }
+}

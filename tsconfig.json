@@ -1,6 +1,32 @@
 {
-  "extends": "expo/tsconfig.base",
   "compilerOptions": {
-    "strict": true
-  }
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+      "@colors": [
+        "./constants/Colors"
+      ],
+      "@storage": [
+        "./constants/Storage"
+      ],
+      "@fonts": [
+        "../assets/fonts"
+      ],
+      "@textComponent":[
+        "./components/TextComponent"
+      ],
+      "@textInputComponent":[
+        "./components/TextInputComponent"
+      ],
+      "@primaryButton":[
+        "./components/PrimaryButton"
+      ],
+      "@schemas":[
+        "./shared/validationSchema"
+      ]
+    }
+  },
+  "extends": "expo/tsconfig.base"
 }

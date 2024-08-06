@@ -1,0 +1,92 @@
+{
+  "translation": {
+    "welcome": "أهلاً بك",
+    "appName":"ENGLISHOME",
+    "title":"مرحباً بك فى انجليش هوم",
+    "subTitle":"هتتكلم الانجليزية من الصفر للاحتراف",
+    "onboarding": {
+      "title1": "بوابتك إلى الاسترخاء",
+      "description1": "استمتع، استرخ، وتجدّد مع SpaVation - حيث يلتقي الرفاهية بالصحة",
+      "title2": "الصفاء Spavation",
+      "description2": "اغمر نفسك بالرفاهية، أيقظ حواسك",
+      "title3": "ترقية العافية",
+      "description3": "حيث كل لحظة هي رحلة إلى النعيم",
+      "next": "التالي",
+      "skip": "تخطى",
+      "login": "تسجيل الدخول",
+      "signUp": "إنشاء حساب"
+    },
+    "login": {
+      "title": "مرحباً، مرحباً بعودتك",
+      "subTitle": "سعيدون برؤيتك مرة أخرى، يرجى تسجيل الدخول هنا.",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "أدخل بريدك الإلكتروني",
+      "password": "كلمة المرور",
+      "forgotPassword": "هل نسيت كلمة المرور؟",
+      "button": "تسجيل الدخول",
+      "noAccount": "ليس لديك حساب؟",
+      "registerNow": "سجل الآن"
+    },
+    "register": {
+      "title": "أهلاً بك",
+      "header": "انشئ حسابك",
+      "createAccount": "أولاً، دعنا ننشئ حسابك",
+      "firstName": "الاسم الأول",
+      "firstNamePlaceholder": "يرجى إدخال اسمك الأول",
+      "lastName": "اسم العائلة",
+      "lastNamePlaceholder": "يرجى إدخال اسم العائلة",
+      "address": "العنوان",
+      "addressPlaceholder": "يرجى إدخال عنوانك",
+      "phone": "الهاتف",
+      "phonePlaceholder": "يرجى إدخال رقم هاتفك",
+      "email": "البريد الإلكتروني",
+      "emailPlaceholder": "يرجى إدخال بريدك الإلكتروني",
+      "password": "كلمة المرور",
+      "passwordPlaceholder": "يرجى إدخال كلمة المرور الخاصة بك",
+      "confirmPassword": "تأكيد كلمة المرور",
+      "confirmPasswordPlaceholder": "يرجى إعادة إدخال كلمة المرور الخاصة بك",
+      "button": "سجل",
+      "alreadyHaveAccount": "هل لديك حساب؟",
+      "login": "تسجيل الدخول",
+      "governorate": "المحافظة"
+    },
+    "forgetPassword": {
+      "otp": "رمز التحقق لمرة واحدة",
+      "title": "أدخل رمز التحقق",
+      "subTitle": "أدخل الرمز المكون من 6 أرقام المرسل إلى",
+      "noCode": "لم تحصل على رمز؟",
+      "resend": "اطلب رسالة جديدة",
+      "confirm": "تأكيد"
+    },
+    "home": {
+      "greetingMorning": "صباح الخير!",
+      "greetingAfternoon": "مساء الخير!",
+      "search": "ابحث",
+      "viewAll": "عرض الكل",
+      "categories": "الفئات",
+      "discover": {
+        "recommendations": "توصيات",
+        "nearbySalons": "صالونات قريبة",
+        "hotOffers": "عروض ساخنة",
+        "topRated": "أعلى تقييم"
+      }
+    },
+    "reservation": {
+      "title": "الحجوزات"
+    },
+    "setting": {
+      "title": "الإعدادات",
+      "account-information": "معلومات الحساب",
+      "notifications": "الإشعارات",
+      "language": "اللغة",
+      "blocked": "المحظورون",
+      "help": "المساعدة",
+      "payment-settings": "إعدادات الدفع",
+      "logout": "تسجيل الخروج",
+      "change-password": "تغيير كلمة المرور",
+      "personal-details": "تفاصيل شخصية",
+      "save-changes": "حفظ التغييرات",
+      "save": "حفظ"
+    }
+  }
+}
