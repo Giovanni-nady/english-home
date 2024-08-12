@@ -1,4 +1,11 @@
-import { I18nManager, Image, Platform, Text, View } from 'react-native'
+import {
+  I18nManager,
+  Image,
+  Platform,
+  Text,
+  useColorScheme,
+  View
+} from 'react-native'
 import React, { useState } from 'react'
 import TextInputComponent from '@textInputComponent'
 import PrimaryButton from '@primaryButton'
@@ -42,6 +49,7 @@ const UserForm: React.FC<UserFormProps> = ({
 }) => {
   const navigation = useNavigation<NativeStackNavigationProp<any>>()
   const { t } = useTranslation()
+  const colorScheme = useColorScheme()
   const theme = useTheme()
   const { setUserData, userData } = useAuth()
   const [isPending, setIsPending] = useState(false)
@@ -148,7 +156,7 @@ const UserForm: React.FC<UserFormProps> = ({
           error.response?.data?.errors ||
           error.response?.data?.message ||
           'An error occurred'
-        
+
         showToast({
           type: 'error',
           title: 'Something went wrong',
@@ -182,7 +190,6 @@ const UserForm: React.FC<UserFormProps> = ({
         dirty
       }) => (
         <View>
-
           {/* inputs */}
           <View>
             <Text>{JSON.stringify(process.env.API_BASE_URL)}</Text>
@@ -221,81 +228,79 @@ const UserForm: React.FC<UserFormProps> = ({
             </View>
 
             {/* <View style={{ flexDirection: 'row', marginTop: 12, gap: 8 }}> */}
-              {/* address */}
-              <View style={{ flex: 1 , marginTop: 12}}>
-                <TextInputComponent
-                  label={'register.address'}
-                  type='text'
-                  placeholder={t('register.addressPlaceholder')}
-                  value={values.address}
-                  onChangeText={handleChange('address')}
-                  onBlur={handleBlur('address')}
-                  error={
-                    errors.address && touched.address
-                      ? errors.address
-                      : undefined
-                  }
-                />
-              </View>
+            {/* address */}
+            <View style={{ flex: 1, marginTop: 12 }}>
+              <TextInputComponent
+                label={'register.address'}
+                type='text'
+                placeholder={t('register.addressPlaceholder')}
+                value={values.address}
+                onChangeText={handleChange('address')}
+                onBlur={handleBlur('address')}
+                error={
+                  errors.address && touched.address ? errors.address : undefined
+                }
+              />
+            </View>
 
-              {/* governorate_id */}
-              <View style={{ flex: 1, marginTop: 12 }}>
-                <TextComponent
-                  style={{ marginVertical: 12 }}
-                  size='titleMedium'
-                  fontFamily='Roboto-Regular-400'
-                  color='dark'
-                >
-                  {t('register.governorate')}
-                </TextComponent>
-                <View
-                  style={{
-                    width: '100%',
-                    borderWidth: 1,
-                    borderRadius: 100,
-                    borderColor: '#E5E5E3',
-                    overflow: 'hidden'
-                  }}
-                >
-                  {isLoading ? (
-                    <View>
-                      <ActivityIndicator
-                        style={{ padding: 18, backgroundColor: 'white' }}
+            {/* governorate_id */}
+            <View style={{ flex: 1, marginTop: 12 }}>
+              <TextComponent
+                style={{ marginVertical: 12 }}
+                size='titleMedium'
+                fontFamily='Roboto-Regular-400'
+                color='dark'
+              >
+                {t('register.governorate')}
+              </TextComponent>
+              <View
+                style={{
+                  width: '100%',
+                  borderWidth: 1,
+                  borderRadius: 100,
+                  borderColor: colorScheme === 'dark' ? '#E5E5E3' : '#331D2C',
+                  overflow: 'hidden'
+                }}
+              >
+                {isLoading ? (
+                  <View>
+                    <ActivityIndicator
+                      style={{ padding: 18, backgroundColor: 'white' }}
+                    />
+                  </View>
+                ) : (
+                  <Picker
+                    style={{
+                      width: '100%',
+                      borderWidth: 1,
+                      padding: 29,
+                      borderRadius: 100,
+                      color: colorScheme === 'dark' ? 'white' : '#331D2C',
+                      backgroundColor: theme.colors.onSecondary,
+                      fontSize: 17,
+                      textAlign: I18nManager?.isRTL ? 'right' : 'left'
+                    }}
+                    selectedValue={values.governorate_id}
+                    onValueChange={handleChange('governorate_id')}
+                    onBlur={handleBlur('governorate_id')}
+                  >
+                    {governorates?.governorates?.map((gov: any) => (
+                      <Picker.Item
+                        key={gov.id}
+                        label={gov.name}
+                        value={gov.id.toString()}
                       />
-                    </View>
-                  ) : (
-                    <Picker
-                      style={{
-                        width: '100%',
-                        borderWidth: 1,
-                        padding: 29,
-                        borderRadius: 100,
-                        backgroundColor: theme.colors.onSecondary,
-                        borderColor: '#E5E5E3',
-                        fontSize: 17,
-                        textAlign: I18nManager?.isRTL ? 'right' : 'left'
-                      }}
-                      selectedValue={values.governorate_id}
-                      onValueChange={handleChange('governorate_id')}
-                      onBlur={handleBlur('governorate_id')}
-                    >
-                      {governorates?.governorates?.map((gov: any) => (
-                        <Picker.Item
-                          key={gov.id}
-                          label={gov.name}
-                          value={gov.id.toString()}
-                        />
-                      ))}
-                    </Picker>
-                  )}
-                </View>
-
-                {errors.governorate_id && touched.governorate_id && (
-                  <TextComponent style={{ color: 'red' }}>
-                    {errors.governorate_id}
-                  </TextComponent>
+                    ))}
+                  </Picker>
                 )}
               </View>
+
+              {errors.governorate_id && touched.governorate_id && (
+                <TextComponent style={{ color: 'red' }}>
+                  {errors.governorate_id}
+                </TextComponent>
+              )}
+            </View>
             {/* </View> */}
 
             {/* phone */}
@@ -375,7 +380,7 @@ const UserForm: React.FC<UserFormProps> = ({
               bgColor='primary'
               borderColor='primary'
               touchableOpacity={true}
-              textColor='onPrimary'
+              textColor='textPrimary'
             />
           </View>
         </View>

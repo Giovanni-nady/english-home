@@ -17,9 +17,11 @@ import MessagesScreen from '@/screens/messages/MessagesScreen'
 import AccountInfoScreen from '@/screens/settings/AccountInfo/AccountInfoScreen'
 import PersonalDetailsScreen from '@/screens/settings/AccountInfo/PersonalDetailsScreen'
 import ChangePasswordScreen from '@/screens/settings/AccountInfo/ChangePasswordScreen'
-import { Platform } from 'react-native'
+import { Platform, useColorScheme } from 'react-native'
 import HotOffersScreen from '@/screens/home/hotOffers/HotOffersScreen'
 import TopRatedScreen from '@/screens/home/topRated/TopRatedScreen'
+import { createDrawerNavigator } from '@react-navigation/drawer'
+import CustomDrawerContent from '@/components/navigation/CustomDrawerContent'
 
 type AppStackParamList = {
   Dashboard: undefined
@@ -39,7 +41,7 @@ type AppStackParamList = {
   ChangePassword: undefined
 }
 
-const Tab = createBottomTabNavigator<AppStackParamList>()
+const Tab = createDrawerNavigator<AppStackParamList>()
 const Stack = createNativeStackNavigator<AppStackParamList>()
 
 function HomeStack () {
@@ -86,38 +88,10 @@ function SettingsStack () {
 }
 
 const AppStack = () => {
+  const colorScheme = useColorScheme()
+
   return (
-    <Tab.Navigator
-      screenOptions={({ route }) => ({
-        tabBarIcon: ({ focused, color, size }) => {
-          if (route.name === 'Home') {
-            return <AntDesign name={'home'} size={size} color={color} />
-          } else if (route.name === 'Categories') {
-            return <FontAwesome name={'ticket'} size={size} color={color} />
-          } else if (route.name === 'Settings') {
-            return (
-              <Ionicons name='settings-outline' size={size} color={color} />
-            )
-          } else if (route.name === 'Favorite') {
-            return <FontAwesome5 name='heart' size={size} color={color} />
-          } else if (route.name === 'Reservations') {
-            return <Ionicons name='ticket-outline' size={size} color={color} />
-          } else if (route.name === 'Messages') {
-            return <AntDesign name='message1' size={size} color={color} />
-          }
-
-          return null
-
-          // return <AntDesign name={iconName} size={size} color={color} />
-          // You can return any component that you like here!
-        },
-        tabBarStyle: { height: Platform.OS === 'ios' ? 100 : 60 },
-        tabBarLabelStyle: { paddingBottom: 8, fontSize: 12 },
-        tabBarActiveTintColor: '#A25DB6',
-        tabBarInactiveTintColor: 'gray',
-        headerShown: false
-      })}
-    >
+    <Tab.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
       <Tab.Screen name='Home' component={HomeStack} />
       <Tab.Screen name='Reservations' component={ReservationsScreen} />
       <Tab.Screen name='Favorite' component={FavoriteScreen} />

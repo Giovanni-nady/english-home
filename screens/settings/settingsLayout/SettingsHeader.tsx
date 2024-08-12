@@ -4,13 +4,14 @@ import { useAuth } from '@/context/AuthContext'
 import { useTheme } from 'react-native-paper'
 import { Image } from 'expo-image'
 import TextComponent from '@textComponent'
-import { AntDesign } from '@expo/vector-icons'
+import { AntDesign, MaterialCommunityIcons } from '@expo/vector-icons'
 import * as ImagePicker from 'expo-image-picker'
 import axios from 'axios'
 import showToast from '@/shared/ShowToast'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { setItem } from '@/constants/Storage'
+import PrimaryButton from '@/components/PrimaryButton'
 
 const blurhash =
   '|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj['
@@ -141,22 +142,48 @@ export default function SettingsHeader () {
   return (
     <View
       style={{
-        backgroundColor: theme.colors.secondaryBackground,
-        borderTopStartRadius: 50,
-        borderTopEndRadius: 50,
-        padding: 35,
-        paddingBottom: 100
+        marginTop: 90,
+        position: 'relative',
+        width: '100%',
+        height: 375,
+        padding: 18,
+        borderRadius: 24,
+        backgroundColor: 'white',
+        shadowColor: '#00000040',
+        shadowOffset: {
+          width: 0,
+          height: 6
+        },
+        shadowOpacity: 0.37,
+        shadowRadius: 7.49,
+        elevation: 12
       }}
     >
       <View
         style={{
-          flexDirection: 'column',
-          justifyContent: 'center',
+          position: 'relative',
           alignItems: 'center',
-          gap: 8
+          top: -100
+          // paddingBottom: -600,
         }}
       >
-        <View>
+        {/* image */}
+        <View
+          style={{
+            width: 150,
+            height: 150,
+            backgroundColor: '#fff',
+            borderRadius: 100,
+            shadowColor: '#000000',
+            shadowOffset: {
+              width: 0,
+              height: 6
+            },
+            shadowOpacity: 0.37,
+            shadowRadius: 7.49,
+            elevation: 12
+          }}
+        >
           <Image
             style={{
               width: 150,
@@ -171,7 +198,7 @@ export default function SettingsHeader () {
             contentFit='contain'
             transition={1000}
           />
-          <TouchableOpacity
+          {/* <TouchableOpacity
             style={{
               position: 'absolute',
               bottom: -10,
@@ -193,26 +220,126 @@ export default function SettingsHeader () {
             onPress={pickImage}
           >
             <AntDesign name='edit' size={30} color='black' />
-          </TouchableOpacity>
+          </TouchableOpacity> */}
         </View>
 
-        <View>
-          <TextComponent
-            fontFamily='Roboto-Regular-400'
-            size='titleLarge'
-            color='white'
-            align='center'
+        {/* two buttons for picture */}
+        <View
+          style={{
+            width: '100%',
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            paddingTop: 16
+          }}
+        >
+          <PrimaryButton
+            title='setting.change-picture'
+            style={{
+              paddingHorizontal: 10,
+              paddingVertical: 6,
+              justifyContent: 'center'
+            }}
+            icon='square-edit-outline'
+            loading={isLoading}
+            // disabled={!isValid || !dirty || isPending}
+            onPress={pickImage}
+            bgColor='primary'
+            borderColor='primary'
+            touchableOpacity={true}
+            textColor='textPrimary'
+          />
+          <PrimaryButton
+            style={{
+              paddingHorizontal: 10,
+              paddingVertical: 6,
+              justifyContent: 'center'
+            }}
+            title='setting.remove-picture'
+            loading={isLoading}
+            icon='delete-outline'
+            // disabled={!isValid || !dirty || isPending}
+            onPress={() => {}}
+            bgColor='primary'
+            borderColor='primary'
+            touchableOpacity={true}
+            textColor='textPrimary'
+          />
+        </View>
+
+        <View
+          style={{
+            width: '100%',
+            marginTop: 28,
+            gap: 16
+          }}
+        >
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'flex-start',
+              alignItems: 'center'
+            }}
           >
-            {userData?.applicant?.first_name} {userData?.applicant?.last_name}
-          </TextComponent>
-          <TextComponent
-            fontFamily='Roboto-Regular-400'
-            size='titleSmall'
-            color='white'
-            align='center'
+            <MaterialCommunityIcons name='account' size={24} color='black' />
+            <TextComponent
+              fontFamily='Roboto-Regular-400'
+              size='titleLarge'
+              color='textPrimaryColor'
+              style={{ marginStart: 6 }}
+            >
+              {userData?.applicant?.first_name} {userData?.applicant?.last_name}
+            </TextComponent>
+          </View>
+          {/* email */}
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'flex-start',
+              alignItems: 'center'
+            }}
           >
-            {userData?.applicant?.email}
-          </TextComponent>
+            <MaterialCommunityIcons name='email' size={24} color='black' />
+            <TextComponent
+              fontFamily='Roboto-Regular-400'
+              size='titleLarge'
+              color='textPrimaryColor'
+              style={{ marginStart: 6 }}
+            >
+              {userData?.applicant?.email}
+            </TextComponent>
+          </View>
+          {/* phone */}
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'flex-start',
+              alignItems: 'center'
+            }}
+          >
+            <MaterialCommunityIcons name='cellphone' size={24} color='black' />
+            <TextComponent
+              fontFamily='Roboto-Regular-400'
+              size='titleLarge'
+              color='textPrimaryColor'
+              style={{ marginStart: 6 }}
+            >
+              966 123456789
+            </TextComponent>
+          </View>
+          {/* edit personal details button */}
+          <View style={{ marginTop: 10 }}>
+            <PrimaryButton
+              title='setting.edit-profile'
+              icon='square-edit-outline'
+              loading={false}
+              disabled={false}
+              onPress={() => {}}
+              bgColor='primary'
+              borderColor='primary'
+              touchableOpacity={true}
+              textColor='textPrimary'
+            />
+          </View>
         </View>
       </View>
     </View>

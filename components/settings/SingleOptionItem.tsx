@@ -4,6 +4,7 @@ import TextComponent from '@textComponent'
 import React from 'react'
 // import { maskHiddenString } from '@utils/stringUtils'
 import { I18nManager, TouchableOpacity, View } from 'react-native'
+import { useTheme } from 'react-native-paper'
 // import clsx from 'clsx'
 
 export default function SingleOptionItem ({
@@ -20,7 +21,7 @@ export default function SingleOptionItem ({
   onClick: () => void
 }) {
   const isRtl = I18nManager.isRTL
-
+const theme = useTheme()
   const arrowIconProps = {
     height: 20,
     width: 20
@@ -34,7 +35,7 @@ export default function SingleOptionItem ({
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'flex-start',
-        backgroundColor: 'white'
+        backgroundColor: theme.colors.onMixedTernary
       }}
       onPress={onClick}
     >

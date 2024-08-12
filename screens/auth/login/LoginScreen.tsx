@@ -18,7 +18,7 @@ export default function LoginScreen () {
   const theme = useTheme()
 
   return (
-    <SafeAreaViewLayout backgroundColor='onBackground' statusContentStyle='light'>
+    <SafeAreaViewLayout backgroundColor='onBackground' statusContentStyle='light' translucent={true}>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -39,7 +39,7 @@ export default function LoginScreen () {
           />
 
           <View style={[styles.formSection, { backgroundColor: theme.colors.onSecondary }]}>
-            <View style={{ width: '90 %', paddingTop: 26 }}>
+            <View style={{ width: '90%', paddingTop: 26 }}>
               {/* title and subtitle */}
               <AuthTitle
                 title={t('title')}

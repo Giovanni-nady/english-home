@@ -1,4 +1,4 @@
-import { ScrollView, View } from 'react-native'
+import { ScrollView, Text, View } from 'react-native'
 import React, { useEffect, useRef, useState } from 'react'
 import { useTheme } from 'react-native-paper'
 import HomeHeader from './HomeHeader'
@@ -16,6 +16,8 @@ import Animated, {
   withSpring,
   FadeInDown
 } from 'react-native-reanimated'
+import TextComponent from '@/components/TextComponent'
+import { useTranslation } from 'react-i18next'
 
 type ComponentMap = {
   recommendations: JSX.Element
@@ -24,12 +26,14 @@ type ComponentMap = {
   topRated: JSX.Element
 }
 
-
 export default function HomeScreen () {
   const theme = useTheme()
-const [activeCategory, setActiveCategory] = useState<
-  'recommendations' | 'nearbySalons' | 'hotOffers' | 'topRated'
->('recommendations')
+  const { t, i18n } = useTranslation()
+  console.log(i18n.dir())
+
+  const [activeCategory, setActiveCategory] = useState<
+    'recommendations' | 'nearbySalons' | 'hotOffers' | 'topRated'
+  >('recommendations')
 
   const animatedValue = useSharedValue(0)
 
@@ -39,8 +43,10 @@ const [activeCategory, setActiveCategory] = useState<
 
   const COMPONENTS_MAP: ComponentMap = {
     recommendations: <AllSections theme={theme} />,
-    nearbySalons: <NearbySalonSection theme={theme} delay={200} extraSpace={true} />,
-    hotOffers: <HotOffersSection theme={theme} delay={200} extraSpace={true}/>,
+    nearbySalons: (
+      <NearbySalonSection theme={theme} delay={200} extraSpace={true} />
+    ),
+    hotOffers: <HotOffersSection theme={theme} delay={200} extraSpace={true} />,
     topRated: <TopRatedSection theme={theme} delay={200} />
   }
 
@@ -60,10 +66,90 @@ const [activeCategory, setActiveCategory] = useState<
   }, [animatedValue.value])
 
   return (
-    <SafeAreaViewLayout backgroundColor='background' statusContentStyle='dark'>
-      <HomeHeader theme={theme} />
-      <HomeSearchBar theme={theme} />
-      <View
+    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='dark'>
+      {/* <HomeHeader theme={theme} /> */}
+      <View style={{ padding: 12, flexDirection: 'column', gap: 22 }}>
+        <View style={{ padding: 8 }}>
+          <TextComponent
+            fontFamily='Roboto-Bold-700'
+            size='titleLarge'
+            color='textPrimaryColor'
+          >
+            {t('home.reads')}
+          </TextComponent>
+
+          {/* percentage */}
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center'
+            }}
+          >
+            <TextComponent
+              fontFamily='Roboto-Medium-500'
+              size='titleLarge'
+              color='textPrimaryColor'
+            >
+              {t('home.sub-reads')}
+            </TextComponent>
+            <View
+              style={{
+                backgroundColor: '#331D2C',
+                width: 80,
+                height: 80,
+                borderRadius: 100
+              }}
+            ></View>
+          </View>
+        </View>
+        {/* reading card */}
+        <View>
+          <TextComponent
+            style={{ paddingStart: 6,paddingBottom:8 }}
+            align={i18n.dir() === 'rtl' ? 'right' : 'left'}
+            fontFamily='Roboto-Bold-700'
+            size='titleLarge'
+            color='textPrimaryColor'
+          >
+            {t('home.read')}
+          </TextComponent>
+          <View
+            style={{
+              width: '100%',
+              padding: 18,
+              borderRadius: 12,
+              backgroundColor: 'white',
+              shadowColor: '#00000040',
+              shadowOffset: {
+                width: 0,
+                height: 6
+              },
+              shadowOpacity: 0.37,
+              shadowRadius: 7.49,
+
+              elevation: 12
+            }}
+          >
+            <TextComponent
+              fontFamily='Roboto-Medium-500'
+              size='titleLarge'
+              style={{ lineHeight: 32 }}
+              align={i18n.dir() === 'rtl' ? 'right' : 'left'}
+              color='textPrimaryColor'
+            >
+              My childhood was full of wonderful memories and adventures. I grew
+              up in a small town, surrounded by nature and friendly neighbors.
+              Every day was a new opportunity for discovery and learning. Let me
+              take you on a journey through some of my favorite childhood
+              stories
+            </TextComponent>
+          </View>
+        </View>
+      </View>
+
+      {/* <HomeSearchBar theme={theme} /> */}
+      {/* <View
         style={{
           marginVertical: -60,
           padding: 35,
@@ -78,17 +164,15 @@ const [activeCategory, setActiveCategory] = useState<
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{ alignContent: 'center' }}
         >
-          {/* recommendation slider */}
+          recommendation slider
           <DiscoverSlider theme={theme} setActiveCategory={setActiveCategory} />
 
-          {/* selected section */}
+          selected section
           <Animated.View style={animatedStyles}>
             {renderComponent()}
           </Animated.View>
-          {/* nearby salons */}
-          {/* <NearbySalonSection theme={theme} /> */}
         </ScrollView>
-      </View>
+      </View> */}
     </SafeAreaViewLayout>
   )
 }

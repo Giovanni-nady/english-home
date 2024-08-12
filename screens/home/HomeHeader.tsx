@@ -47,7 +47,7 @@ export default function HomeHeader ({ theme }: { theme: any }) {
           flexDirection: 'row',
           justifyContent: 'space-between',
           alignItems: 'center',
-          marginVertical: 20
+          marginVertical: 14
         }}
       >
         <View style={{ flexDirection: 'row', alignItems: 'center', gap: 8 }}>

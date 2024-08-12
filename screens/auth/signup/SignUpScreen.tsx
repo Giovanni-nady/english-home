@@ -23,7 +23,7 @@ export default function SignUpScreen () {
   const theme = useTheme()
   
   return (
-    <SafeAreaViewLayout backgroundColor='primary' statusContentStyle='light'>
+    <SafeAreaViewLayout backgroundColor='onBackground' statusContentStyle='light' translucent={true}>
       <KeyboardAvoidingView
         style={{ flex: 1 }}
         behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
@@ -47,10 +47,10 @@ export default function SignUpScreen () {
           <View
             style={[
               styles.formSection,
-              { backgroundColor: theme.colors.primaryContainer }
+              { backgroundColor: theme.colors.onSecondary }
             ]}
           >
-            <View style={{ width: '85%', paddingTop: 26 }}>
+            <View style={{ width: '90%', paddingTop: 26 }}>
               {/* title and subtitle */}
               <AuthTitle
                 title={t('register.title')}

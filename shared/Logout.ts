@@ -18,13 +18,13 @@ const useLogout = () => {
 
       const response = await axios.post(url, {}, { headers })
       console.log('response.data', response.data)
-
-      await removeAuthToken()
-      setIsAuthenticated(false)
       navigation.reset({
         index: 0,
         routes: [{ name: 'Auth' }]
       })
+
+      await removeAuthToken()
+      setIsAuthenticated(false)
     } catch (error) {
       console.error('Error during logout:', error)
     }

@@ -1,9 +1,9 @@
 {
   "translation": {
     "welcome": "أهلاً بك",
-    "appName":"ENGLISHOME",
-    "title":"مرحباً بك فى انجليش هوم",
-    "subTitle":"هتتكلم الانجليزية من الصفر للاحتراف",
+    "appName": "ENGLISHOM",
+    "title": "مرحباً بك فى انجليش هوم",
+    "subTitle": "هتتكلم الانجليزية من الصفر للاحتراف",
     "onboarding": {
       "title1": "بوابتك إلى الاسترخاء",
       "description1": "استمتع، استرخ، وتجدّد مع SpaVation - حيث يلتقي الرفاهية بالصحة",
@@ -69,13 +69,24 @@
         "nearbySalons": "صالونات قريبة",
         "hotOffers": "عروض ساخنة",
         "topRated": "أعلى تقييم"
-      }
+      },
+      "read": "READ",
+      "reads": "لديك 5 مهمات قراءة اليوم",
+      "sub-reads": "معدل اكمال المهمات"
     },
     "reservation": {
       "title": "الحجوزات"
     },
     "setting": {
-      "title": "الإعدادات",
+      "title": "البيانات الشخصية",
+      "body-title": "السجل الدراسي",
+      "body-subtitle": "يحتوي على بياناتك الدراسية سواء المستوي والاسبوع واليوم",
+      "level": "Level",
+      "week": "Week",
+      "day": "Day",
+      "change-picture": "تغير الصورة",
+      "remove-picture": "حذف الصورة",
+      "edit-profile": "تعديل البيانات",
       "account-information": "معلومات الحساب",
       "notifications": "الإشعارات",
       "language": "اللغة",

@@ -7,12 +7,14 @@ import { StatusBar } from 'expo-status-bar'
 interface SafeAreaViewLayoutProps {
   children: React.ReactNode
   backgroundColor?: string
+  translucent?: boolean
   statusContentStyle?: 'light' | 'dark'
 }
 
 const SafeAreaViewLayout: React.FC<SafeAreaViewLayoutProps> = ({
   children,
   backgroundColor,
+  translucent= false,
   statusContentStyle = 'light'
 }) => {
   const theme = useTheme()
@@ -26,14 +28,14 @@ const SafeAreaViewLayout: React.FC<SafeAreaViewLayoutProps> = ({
         backgroundColor: bgColor
       }}
     >
+
       <StatusBar
         style={statusContentStyle}
         backgroundColor={'transparent'}
-        translucent={true}
+        translucent={translucent}
         hidden={false}
         animated={true}
       />
-
       {children}
     </SafeAreaView>
   )

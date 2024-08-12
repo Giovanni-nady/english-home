@@ -1,7 +1,7 @@
 {
   "translation": {
     "welcome": "Welcome to React and react-i18next",
-    "appName":"ENGLISHOME",
+    "appName":"ENGLISHOM",
     "title": "Welcome to English Home",
     "subTitle": "You will speak English from zero to professional",
     "onboarding": {
@@ -69,13 +69,17 @@
         "nearbySalons": "Nearby Salons",
         "hotOffers": "Hot Offers",
         "topRated": "Top Rated"
-      }
+      },
+      "read": "READ",
+      "reads":"You have 5 recommendations"
     },
     "reservation": {
       "title": "Reservations"
     },
     "setting": {
-      "title": "Settings",
+      "title": "Personal Data",
+      "change-picture": "Change picture",
+      "remove-picture": "Remove picture",
       "account-information": "Account Information",
       "notifications": "Notifications",
       "language": "Language",

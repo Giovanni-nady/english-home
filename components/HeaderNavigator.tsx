@@ -24,9 +24,9 @@ export default function HeaderNavigator ({
     <View
       style={{
         flexDirection: 'row',
-        justifyContent: 'space-around',
+        // justifyContent: 'space-around',
         alignItems: 'center',
-        marginVertical: 35
+        marginVertical: 20
       }}
     >
       {goBack && (
@@ -73,10 +73,10 @@ export default function HeaderNavigator ({
       )}
 
       <TextComponent
-        fontFamily='Roboto-Medium-500'
+        fontFamily='Roboto-Bold-700'
         size='titleLarge'
-        color='dark'
-        align='center'
+        color='textPrimaryColor'
+        // align={i18n.dir() === 'rtl' ? 'right' : 'left'}
       >
         {t(title)}
       </TextComponent>
