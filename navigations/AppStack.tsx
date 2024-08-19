@@ -12,7 +12,6 @@ import {
 import SettingsScreen from '@/screens/settings/SettingsScreen'
 import FavoriteScreen from '@/screens/favorite/FavoriteScreen'
 import NearbySalonsScreen from '@/screens/home/nearbySalons/NearbySalonsScreen'
-import ReservationsScreen from '@/screens/reservations/ReservationsScreen'
 import MessagesScreen from '@/screens/messages/MessagesScreen'
 import AccountInfoScreen from '@/screens/settings/AccountInfo/AccountInfoScreen'
 import PersonalDetailsScreen from '@/screens/settings/AccountInfo/PersonalDetailsScreen'
@@ -22,6 +21,8 @@ import HotOffersScreen from '@/screens/home/hotOffers/HotOffersScreen'
 import TopRatedScreen from '@/screens/home/topRated/TopRatedScreen'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import CustomDrawerContent from '@/components/navigation/CustomDrawerContent'
+import PictureScreen from '@/screens/picture/PictureScreen'
+import QAScreen from '@/screens/favorite/QAScreen'
 
 type AppStackParamList = {
   Dashboard: undefined
@@ -30,8 +31,8 @@ type AppStackParamList = {
   HotOffers: undefined
   TopRated: undefined
   Home: undefined
-  Reservations: undefined
-  Favorite: undefined
+  Picture: undefined
+  QA: undefined
   Messages: undefined
   Setting: undefined
   Settings: undefined
@@ -93,8 +94,8 @@ const AppStack = () => {
   return (
     <Tab.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
       <Tab.Screen name='Home' component={HomeStack} />
-      <Tab.Screen name='Reservations' component={ReservationsScreen} />
-      <Tab.Screen name='Favorite' component={FavoriteScreen} />
+      <Tab.Screen name='Picture' component={PictureScreen} />
+      <Tab.Screen name='QA' component={QAScreen} options={{drawerLabel:"Q&A",headerTitle:"Q&A"}} />
       <Tab.Screen name='Messages' component={MessagesScreen} />
       <Tab.Screen name='Settings' component={SettingsStack} />
     </Tab.Navigator>

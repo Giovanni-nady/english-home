@@ -1,3 +1,6 @@
+export const blurhash =
+  '|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj['
+
 export interface DataItem {
   name: string
   icon: { url: string }
@@ -31,5 +34,5 @@ export const nearbyList: DataItem[] = [
   { name: 'Cafe', icon: { url: 'https://picsum.photos/seed/cafe/600' } },
   { name: 'Park', icon: { url: 'https://picsum.photos/seed/park/600' } },
   { name: 'Gym', icon: { url: 'https://picsum.photos/seed/gym/600' } },
-  { name: 'Work', icon: { url: 'https://picsum.photos/seed/work/600' } },
+  { name: 'Work', icon: { url: 'https://picsum.photos/seed/work/600' } }
 ]

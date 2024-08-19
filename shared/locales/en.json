@@ -73,8 +73,11 @@
       "read": "READ",
       "reads":"You have 5 recommendations"
     },
-    "reservation": {
-      "title": "Reservations"
+    "picture": {
+      "title": "Pictures"
+    },
+    "QA":{
+      "title":"Questions and Answers"
     },
     "setting": {
       "title": "Personal Data",

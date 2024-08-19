@@ -1,16 +1,11 @@
 import { View, I18nManager, FlatList, Platform, Text } from 'react-native'
-import useLogout from '@/shared/Logout'
-import SwitchSelector from 'react-native-switch-selector'
 import { useTranslation } from 'react-i18next'
 import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
-import RNRestart from 'react-native-restart'
 import { useTheme } from 'react-native-paper'
 import TextComponent from '@/components/TextComponent'
-import React, { useMemo, useRef } from 'react'
-import BottomSheet, { BottomSheetView } from '@gorhom/bottom-sheet'
+import React from 'react'
 
-import SingleOptionItem from '@/components/settings/SingleOptionItem'
 import {
   AntDesign,
   Entypo,

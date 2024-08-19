@@ -74,8 +74,15 @@
       "reads": "لديك 5 مهمات قراءة اليوم",
       "sub-reads": "معدل اكمال المهمات"
     },
-    "reservation": {
-      "title": "الحجوزات"
+    "picture": {
+      "title": "الصــور",
+      "photo": "طبيعة",
+      "nature": "Nature",
+      "sub-photo": "معاني اخري :",
+      "sub-nature": "kind, quality, ease"
+    },
+    "QA":{
+      "title":"الأسألة والأجوبة"
     },
     "setting": {
       "title": "البيانات الشخصية",

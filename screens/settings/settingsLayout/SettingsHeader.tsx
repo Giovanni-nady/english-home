@@ -12,9 +12,8 @@ import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { setItem } from '@/constants/Storage'
 import PrimaryButton from '@/components/PrimaryButton'
+import { blurhash } from '@/constants/Data';
 
-const blurhash =
-  '|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj['
 
 interface ImageData {
   uri: string
@@ -24,7 +23,7 @@ interface ImageData {
 
 export default function SettingsHeader () {
   const { userData, setUserData } = useAuth()
-  const [image, setImage] = useState(null)
+  const [image, setImage] = useState<string | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const navigation = useNavigation<NativeStackNavigationProp<any>>()
 

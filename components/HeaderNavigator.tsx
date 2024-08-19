@@ -26,7 +26,7 @@ export default function HeaderNavigator ({
         flexDirection: 'row',
         // justifyContent: 'space-around',
         alignItems: 'center',
-        marginVertical: 20
+        marginTop: 20
       }}
     >
       {goBack && (
