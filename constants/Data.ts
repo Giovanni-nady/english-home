@@ -36,3 +36,16 @@ export const nearbyList: DataItem[] = [
   { name: 'Gym', icon: { url: 'https://picsum.photos/seed/gym/600' } },
   { name: 'Work', icon: { url: 'https://picsum.photos/seed/work/600' } }
 ]
+
+
+export const grammarKeywords: string[] = [
+  'Always',
+  'Usually',
+  'Often',
+  'Sometimes',
+  'Never',
+  'At night',
+  'Now',
+  'At The Moment',
+  'Today'
+]

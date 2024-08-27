@@ -20,18 +20,18 @@ SplashScreen.preventAutoHideAsync()
 
 export default function App () {
   const [fontsLoaded, fontError] = useFonts({
-    'Roboto-Black-900': require('./assets/fonts/Roboto/Roboto-Black.ttf'),
-    'Roboto-BlackItalic-900': require('./assets/fonts/Roboto/Roboto-BlackItalic.ttf'),
-    'Roboto-Bold-700': require('./assets/fonts/Roboto/Roboto-Bold.ttf'),
-    'Roboto-BoldItalic-700': require('./assets/fonts/Roboto/Roboto-BoldItalic.ttf'),
-    'Roboto-Italic': require('./assets/fonts/Roboto/Roboto-Italic.ttf'),
-    'Roboto-Medium-500': require('./assets/fonts/Roboto/Roboto-Medium.ttf'),
-    'Roboto-MediumItalic-500': require('./assets/fonts/Roboto/Roboto-MediumItalic.ttf'),
-    'Roboto-Regular-400': require('./assets/fonts/Roboto/Roboto-Regular.ttf'),
-    'Roboto-Light-300': require('./assets/fonts/Roboto/Roboto-Light.ttf'),
-    'Roboto-LightItalic-300': require('./assets/fonts/Roboto/Roboto-LightItalic.ttf'),
-    'Roboto-Thin-100': require('./assets/fonts/Roboto/Roboto-Thin.ttf'),
-    'Roboto-ThinItalic-100': require('./assets/fonts/Roboto/Roboto-ThinItalic.ttf')
+    'Roboto-Black-900': require('./assets/fonts/Poppins/Poppins-Black.ttf'),
+    'Roboto-BlackItalic-900': require('./assets/fonts/Poppins/Poppins-BlackItalic.ttf'),
+    'Roboto-Bold-700': require('./assets/fonts/Poppins/Poppins-Bold.ttf'),
+    'Roboto-BoldItalic-700': require('./assets/fonts/Poppins/Poppins-BoldItalic.ttf'),
+    'Roboto-Italic': require('./assets/fonts/Poppins/Poppins-Italic.ttf'),
+    'Roboto-Medium-500': require('./assets/fonts/Poppins/Poppins-Medium.ttf'),
+    'Roboto-MediumItalic-500': require('./assets/fonts/Poppins/Poppins-MediumItalic.ttf'),
+    'Roboto-Regular-400': require('./assets/fonts/Poppins/Poppins-Regular.ttf'),
+    'Roboto-Light-300': require('./assets/fonts/Poppins/Poppins-Light.ttf'),
+    'Roboto-LightItalic-300': require('./assets/fonts/Poppins/Poppins-LightItalic.ttf'),
+    'Roboto-Thin-100': require('./assets/fonts/Poppins/Poppins-Thin.ttf'),
+    'Roboto-ThinItalic-100': require('./assets/fonts/Poppins/Poppins-ThinItalic.ttf')
   })
 
   const lightColors = {

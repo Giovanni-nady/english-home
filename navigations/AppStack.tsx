@@ -10,9 +10,7 @@ import {
   Ionicons
 } from '@expo/vector-icons'
 import SettingsScreen from '@/screens/settings/SettingsScreen'
-import FavoriteScreen from '@/screens/favorite/FavoriteScreen'
 import NearbySalonsScreen from '@/screens/home/nearbySalons/NearbySalonsScreen'
-import MessagesScreen from '@/screens/messages/MessagesScreen'
 import AccountInfoScreen from '@/screens/settings/AccountInfo/AccountInfoScreen'
 import PersonalDetailsScreen from '@/screens/settings/AccountInfo/PersonalDetailsScreen'
 import ChangePasswordScreen from '@/screens/settings/AccountInfo/ChangePasswordScreen'
@@ -23,6 +21,7 @@ import { createDrawerNavigator } from '@react-navigation/drawer'
 import CustomDrawerContent from '@/components/navigation/CustomDrawerContent'
 import PictureScreen from '@/screens/picture/PictureScreen'
 import QAScreen from '@/screens/favorite/QAScreen'
+import GrammarScreen from '@/screens/grammar/GrammarScreen'
 
 type AppStackParamList = {
   Dashboard: undefined
@@ -33,7 +32,7 @@ type AppStackParamList = {
   Home: undefined
   Picture: undefined
   QA: undefined
-  Messages: undefined
+  Grammar: undefined
   Setting: undefined
   Settings: undefined
   AccountInfo: undefined
@@ -92,11 +91,15 @@ const AppStack = () => {
   const colorScheme = useColorScheme()
 
   return (
-    <Tab.Navigator drawerContent={(props) => <CustomDrawerContent {...props} />}>
+    <Tab.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
       <Tab.Screen name='Home' component={HomeStack} />
       <Tab.Screen name='Picture' component={PictureScreen} />
-      <Tab.Screen name='QA' component={QAScreen} options={{drawerLabel:"Q&A",headerTitle:"Q&A"}} />
-      <Tab.Screen name='Messages' component={MessagesScreen} />
+      <Tab.Screen
+        name='QA'
+        component={QAScreen}
+        options={{ drawerLabel: 'Q&A', headerTitle: 'Q&A' }}
+      />
+      <Tab.Screen name='Grammar' component={GrammarScreen} />
       <Tab.Screen name='Settings' component={SettingsStack} />
     </Tab.Navigator>
   )

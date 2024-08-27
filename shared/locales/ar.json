@@ -81,8 +81,14 @@
       "sub-photo": "معاني اخري :",
       "sub-nature": "kind, quality, ease"
     },
-    "QA":{
-      "title":"الأسألة والأجوبة"
+    "QA": {
+      "title": "الأسألة والأجوبة"
+    },
+    "grammar": {
+      "present-simple": "Present simple",
+      "present-simple-ar": "المضارع البسيط",
+      "words": "Words",
+      "words-ar": "الكلمات"
     },
     "setting": {
       "title": "البيانات الشخصية",

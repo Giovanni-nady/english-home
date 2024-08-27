@@ -79,6 +79,12 @@
     "QA":{
       "title":"Questions and Answers"
     },
+    "grammar": {
+      "present-simple": "Present simple",
+      "present-simple-ar":"المضارع البسيط",
+      "words":"Words",
+      "words-ar":"الكلمات"
+    },
     "setting": {
       "title": "Personal Data",
       "change-picture": "Change picture",
