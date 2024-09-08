@@ -20,8 +20,12 @@ import TopRatedScreen from '@/screens/home/topRated/TopRatedScreen'
 import { createDrawerNavigator } from '@react-navigation/drawer'
 import CustomDrawerContent from '@/components/navigation/CustomDrawerContent'
 import PictureScreen from '@/screens/picture/PictureScreen'
-import QAScreen from '@/screens/favorite/QAScreen'
+import QAScreen from '@/screens/QA/QAScreen'
 import GrammarScreen from '@/screens/grammar/GrammarScreen'
+import ListenScreen from '@/screens/listen/ListenScreen'
+import TodayScreen from '@/screens/today/TodayScreen'
+import WriteScreen from '@/screens/write/WriteScreen'
+import SpeakScreen from '@/screens/speak/SpeakScreen'
 
 type AppStackParamList = {
   Dashboard: undefined
@@ -33,6 +37,10 @@ type AppStackParamList = {
   Picture: undefined
   QA: undefined
   Grammar: undefined
+  Listen: undefined
+  Today: undefined
+  Write: undefined
+  Speak: undefined
   Setting: undefined
   Settings: undefined
   AccountInfo: undefined
@@ -91,7 +99,18 @@ const AppStack = () => {
   const colorScheme = useColorScheme()
 
   return (
-    <Tab.Navigator drawerContent={props => <CustomDrawerContent {...props} />}>
+    <Tab.Navigator
+      screenOptions={{
+        headerStyle: {
+          backgroundColor: '#331D2C' // Set the background color of the header
+        },
+        headerTintColor: '#fff', // Set the color of the back button and title
+        headerTitleStyle: {
+          fontWeight: 'bold' // Optional: customize the title font style
+        }
+      }}
+      drawerContent={props => <CustomDrawerContent {...props} />}
+    >
       <Tab.Screen name='Home' component={HomeStack} />
       <Tab.Screen name='Picture' component={PictureScreen} />
       <Tab.Screen
@@ -100,6 +119,10 @@ const AppStack = () => {
         options={{ drawerLabel: 'Q&A', headerTitle: 'Q&A' }}
       />
       <Tab.Screen name='Grammar' component={GrammarScreen} />
+      <Tab.Screen name='Listen' component={ListenScreen} />
+      <Tab.Screen name='Today' component={TodayScreen} />
+      <Tab.Screen name='Write' component={WriteScreen} />
+      <Tab.Screen name='Speak' component={SpeakScreen} />
       <Tab.Screen name='Settings' component={SettingsStack} />
     </Tab.Navigator>
   )

@@ -15,7 +15,7 @@ export default function PictureScreen () {
   const { userData } = useAuth()
 
   return (
-    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='dark'>
+    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='light'>
       <View style={{ padding: 12, flexDirection: 'column', gap: 14 }}>
         <View style={{ padding: 8 }}>
           <HeaderNavigator title='picture.title' goBack={false} />
@@ -60,7 +60,7 @@ export default function PictureScreen () {
                 borderRadius: 30
               }}
               source={{
-                uri: userData.applicant.avatar
+                uri: userData?.applicant?.avatar
               }}
               placeholder={{ blurhash }}
               contentFit='cover'

@@ -16,8 +16,8 @@ const useLogout = () => {
         'Content-Type': 'application/json'
       }
 
-      const response = await axios.post(url, {}, { headers })
-      console.log('response.data', response.data)
+      // const response = await axios.post(url, {}, { headers })
+      // console.log('response.data', response.data)
       navigation.reset({
         index: 0,
         routes: [{ name: 'Auth' }]

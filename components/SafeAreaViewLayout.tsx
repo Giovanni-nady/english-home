@@ -31,7 +31,7 @@ const SafeAreaViewLayout: React.FC<SafeAreaViewLayoutProps> = ({
 
       <StatusBar
         style={statusContentStyle}
-        backgroundColor={'transparent'}
+        backgroundColor={'#331D2C'}
         translucent={translucent}
         hidden={false}
         animated={true}

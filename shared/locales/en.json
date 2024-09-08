@@ -1,7 +1,7 @@
 {
   "translation": {
     "welcome": "Welcome to React and react-i18next",
-    "appName":"ENGLISHOM",
+    "appName": "ENGLISHOM",
     "title": "Welcome to English Home",
     "subTitle": "You will speak English from zero to professional",
     "onboarding": {
@@ -25,7 +25,8 @@
       "forgotPassword": "Forgot password?",
       "button": "Login",
       "noAccount": "Don’t have an account?",
-      "registerNow": "Register now"
+      "registerNow": "Register now",
+      "guest": "Continue as a guest"
     },
     "register": {
       "header": "Register",
@@ -71,24 +72,51 @@
         "topRated": "Top Rated"
       },
       "read": "READ",
-      "reads":"You have 5 recommendations"
+      "reads": "You have 5 recommendations",
+      "sub-reads": "Task Completion Rate"
     },
     "picture": {
-      "title": "Pictures"
+      "title": "Pictures",
+      "photo": "Photo",
+      "nature": "Nature",
+      "sub-photo": "Other meanings:",
+      "sub-nature": "kind, quality, ease"
     },
-    "QA":{
-      "title":"Questions and Answers"
+    "QA": {
+      "title": "Questions and Answers"
     },
     "grammar": {
       "present-simple": "Present simple",
-      "present-simple-ar":"المضارع البسيط",
-      "words":"Words",
-      "words-ar":"الكلمات"
+      "present-simple-ar": "المضارع البسيط",
+      "words": "Words",
+      "words-ar": "الكلمات",
+      "example": "Examples",
+      "example-ar": "أمثلة"
+    },
+    "listen": {
+      "listen-en": "Listening",
+      "listen-ar": "الاستماع",
+      "definition-en": "Definition"
+    },
+    "write": {
+      "write-title": "Write",
+      "write-title-ar": "قم بملئ الفاراغات الاتيه:"
+    },
+    "speak": {
+      "speak-title": "Speak",
+      "speak-title-ar": "قم بتسجيل صوتي للجمل الاتيه:",
+      "record":"Record"
     },
     "setting": {
       "title": "Personal Data",
-      "change-picture": "Change picture",
-      "remove-picture": "Remove picture",
+      "body-title": "Study Record",
+      "body-subtitle": "Contains your academic data such as level, week, and day",
+      "level": "Level",
+      "week": "Week",
+      "day": "Day",
+      "change-picture": "Change",
+      "remove-picture": "Remove",
+      "edit-profile": "Edit Profile",
       "account-information": "Account Information",
       "notifications": "Notifications",
       "language": "Language",
@@ -96,7 +124,7 @@
       "help": "Help",
       "payment-settings": "Payment Settings",
       "logout": "Logout",
-      "change-password": "Change password",
+      "change-password": "Change Password",
       "personal-details": "Personal Details",
       "save-changes": "Save Changes",
       "save": "Save"

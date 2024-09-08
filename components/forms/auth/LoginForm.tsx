@@ -162,12 +162,31 @@ export default function LoginForm () {
           </View>
 
           {/* submit button */}
-          <View style={{ paddingTop: 26 }}>
+          <View style={{ paddingTop: 26, gap: 18 }}>
             <PrimaryButton
               title='login.button'
               loading={isPending}
               disabled={!isValid || !dirty || isPending}
               onPress={handleSubmit}
+              bgColor='primary'
+              borderColor='primary'
+              touchableOpacity={true}
+              textColor='textPrimary'
+            />
+            <PrimaryButton
+              title='login.guest'
+              // loading={isPending}
+              // disabled={!isValid || !dirty || isPending}
+              onPress={() => {
+                setIsAuthenticated(true)
+                setItem('userData', JSON.stringify({}))
+                setAuthToken('data.token')
+                setUserData({})
+                navigation.reset({
+                  index: 0,
+                  routes: [{ name: 'App', params: { screen: 'Home' } }]
+                })
+              }}
               bgColor='primary'
               borderColor='primary'
               touchableOpacity={true}

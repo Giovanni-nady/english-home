@@ -25,7 +25,8 @@
       "forgotPassword": "هل نسيت كلمة المرور؟",
       "button": "تسجيل الدخول",
       "noAccount": "ليس لديك حساب؟",
-      "registerNow": "سجل الآن"
+      "registerNow": "سجل الآن",
+      "guest": "الدخول كضيف"
     },
     "register": {
       "title": "أهلاً بك",
@@ -88,7 +89,22 @@
       "present-simple": "Present simple",
       "present-simple-ar": "المضارع البسيط",
       "words": "Words",
-      "words-ar": "الكلمات"
+      "words-ar": "الكلمات",
+      "example": "Examples",
+      "example-ar": "أمثلة"
+    },
+    "listen": {
+      "listen-en": "Listening",
+      "listen-ar": "الاستماع"
+    },
+    "write": {
+      "write-title": "Write",
+      "write-title-ar": "قم بملئ الفاراغات الاتيه:"
+    },
+    "speak": {
+      "speak-title": "Speak",
+      "speak-title-ar": "قم بتسجيل صوتي للجمل الاتيه:",
+      "record": "تسجيل"
     },
     "setting": {
       "title": "البيانات الشخصية",

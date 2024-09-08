@@ -66,7 +66,7 @@ export default function HomeScreen () {
   }, [animatedValue.value])
 
   return (
-    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='dark'>
+    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='light'>
       {/* <HomeHeader theme={theme} /> */}
       <View style={{ padding: 12, flexDirection: 'column', gap: 22 }}>
         <View style={{ padding: 8 }}>

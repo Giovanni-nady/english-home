@@ -16,7 +16,7 @@ export default function QAScreen () {
   const { userData } = useAuth()
 
   return (
-    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='dark'>
+    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='light'>
       <ScrollView contentContainerStyle={{ flexGrow: 1 }}>
         <View style={{ padding: 12, flexDirection: 'column', gap: 16 }}>
           <View style={{ padding: 8 }}>

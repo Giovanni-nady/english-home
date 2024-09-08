@@ -37,7 +37,6 @@ export const nearbyList: DataItem[] = [
   { name: 'Work', icon: { url: 'https://picsum.photos/seed/work/600' } }
 ]
 
-
 export const grammarKeywords: string[] = [
   'Always',
   'Usually',
@@ -48,4 +47,26 @@ export const grammarKeywords: string[] = [
   'Now',
   'At The Moment',
   'Today'
+]
+
+export const grammarExamples: string[] = [
+  'I read the newspaper every morning.',
+  'She plays the piano beautifully.',
+  'The Earth revolves around the Sun.',
+  'They work at the same company.',
+  'The train leaves at 6 PM every day.',
+  'Water boils at 100 degrees Celsius.'
+]
+
+export const TodayExamples: string[] = [
+  '- Hi',
+  '- Hello everyone',
+  '- My name is …',
+  '- I am 25 years old',
+  '- I am from Saudi Arabia',
+  '- The capital, Riyadh',
+  '- I study English everyday',
+  '- I love sports and reading and camping',
+  '- When I am free time, I like to watch movies',
+  '- Thank you'
 ]

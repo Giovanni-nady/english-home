@@ -12,8 +12,7 @@ import { useNavigation } from '@react-navigation/native'
 import { NativeStackNavigationProp } from '@react-navigation/native-stack'
 import { setItem } from '@/constants/Storage'
 import PrimaryButton from '@/components/PrimaryButton'
-import { blurhash } from '@/constants/Data';
-
+import { blurhash } from '@/constants/Data'
 
 interface ImageData {
   uri: string
@@ -191,7 +190,7 @@ export default function SettingsHeader () {
               borderRadius: 100
             }}
             source={{
-              uri: userData.applicant.avatar
+              uri: userData?.applicant?.avatar
             }}
             placeholder={{ blurhash }}
             contentFit='contain'
@@ -227,6 +226,7 @@ export default function SettingsHeader () {
           style={{
             width: '100%',
             flexDirection: 'row',
+            gap: 12,
             justifyContent: 'space-between',
             paddingTop: 16
           }}
@@ -234,13 +234,14 @@ export default function SettingsHeader () {
           <PrimaryButton
             title='setting.change-picture'
             style={{
+              flex: 1,
               paddingHorizontal: 10,
               paddingVertical: 6,
-              justifyContent: 'center'
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
             icon='square-edit-outline'
             loading={isLoading}
-            // disabled={!isValid || !dirty || isPending}
             onPress={pickImage}
             bgColor='primary'
             borderColor='primary'
@@ -249,14 +250,15 @@ export default function SettingsHeader () {
           />
           <PrimaryButton
             style={{
+              flex: 1,
               paddingHorizontal: 10,
               paddingVertical: 6,
-              justifyContent: 'center'
+              justifyContent: 'center',
+              alignItems: 'center'
             }}
             title='setting.remove-picture'
             loading={isLoading}
             icon='delete-outline'
-            // disabled={!isValid || !dirty || isPending}
             onPress={() => {}}
             bgColor='primary'
             borderColor='primary'

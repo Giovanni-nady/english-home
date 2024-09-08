@@ -7,7 +7,7 @@ import SettingsBody from './settingsLayout/SettingsBody'
 
 export default function SettingsScreen () {
   return (
-    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='dark'>
+    <SafeAreaViewLayout backgroundColor='onSecondary' statusContentStyle='light'>
       {/* settings title screen */}
       <ScrollView style={{padding: 12, flex:1}} showsVerticalScrollIndicator={false}>
 
